@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const [isFlipped, setIsFlipped] = useState(false);
   const projects = [
     {
       title: "ShopWave E-Commerce",
@@ -240,26 +240,27 @@ function App() {
           <div className="flex justify-center">
 
   {/* Coin Container */}
-  <div className="group relative h-72 w-72 md:h-96 md:w-96">
+  <div className="relative h-72 w-72 md:h-96 md:w-96">
 
     {/* Outer Circle */}
     <div className="absolute inset-0 rounded-full border border-cyan-400/30 bg-slate-900 shadow-2xl shadow-cyan-500/10"></div>
 
     {/* Coin */}
     <div
-      className="relative h-full w-full cursor-pointer rounded-full [perspective:1000px]"
+      className="relative h-full w-full cursor-pointer [perspective:1000px]"
+      onClick={() => setIsFlipped(!isFlipped)}
     >
 
       {/* Rotating Inner Circle */}
       <div
-        className="
+        className={`
           relative h-full w-full
           rounded-full
-          transition-transform
-          duration-700
+          transition-transform duration-700
           [transform-style:preserve-3d]
-          group-hover:[transform:rotateY(180deg)]
-        "
+          ${isFlipped ? "[transform:rotateY(180deg)]" : ""}
+          md:hover:[transform:rotateY(180deg)]
+        `}
       >
 
         {/* ================= FRONT - PHOTO ================= */}
@@ -274,7 +275,7 @@ function App() {
           "
         >
           <img
-            src="/Balaji.png"
+            src="/profile.jpg"
             alt="Ramalingam Balaji"
             className="h-full w-full object-cover"
           />
@@ -285,10 +286,7 @@ function App() {
         <div
           className="
             absolute inset-5
-            flex
-            rotate-y-180
-            items-center
-            justify-center
+            flex items-center justify-center
             rounded-full
             border-4 border-cyan-400
             bg-slate-900
@@ -319,10 +317,9 @@ function App() {
 
       </div>
     </div>
-
+</div>
   </div>
 
-</div>
 </div>
       </section>
 
