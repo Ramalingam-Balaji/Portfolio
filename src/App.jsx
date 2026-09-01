@@ -31,8 +31,8 @@ function App() {
       image:
         "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=900&q=80",
       technologies: ["React", "Tailwind CSS"],
-      live: "#",
-      github: "#",
+      live: "https://my-portfolio-roan-one-tdwyn44w9t.vercel.app/",
+      github: "https://github.com/Ramalingam-Balaji/Portfolio",
     },
   ];
 
@@ -47,6 +47,7 @@ function App() {
     "MongoDB",
     "Git",
     "GitHub",
+    "Vercel",
   ];
 
   const closeMenu = () => setMenuOpen(false);
