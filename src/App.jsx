@@ -247,7 +247,7 @@ function App() {
 
     {/* Coin */}
     <div
-      className="relative h-full w-full cursor-pointer [perspective:1000px]"
+      className="relative h-full w-full cursor-pointer perspective-[1000px]"
       onClick={() => setIsFlipped(!isFlipped)}
     >
 
@@ -257,9 +257,9 @@ function App() {
           relative h-full w-full
           rounded-full
           transition-transform duration-700
-          [transform-style:preserve-3d]
-          ${isFlipped ? "[transform:rotateY(180deg)]" : ""}
-          md:hover:[transform:rotateY(180deg)]
+          transform-3d
+          ${isFlipped ? "transform-[rotateY(180deg)]" : ""}
+          md:hover:transform-[rotateY(180deg)]
         `}
       >
 
@@ -271,7 +271,7 @@ function App() {
             rounded-full
             border-4 border-cyan-400
             bg-slate-800
-            [backface-visibility:hidden]
+            backface-hidden
           "
         >
           <img
@@ -291,8 +291,8 @@ function App() {
             border-4 border-cyan-400
             bg-slate-900
             text-center
-            [backface-visibility:hidden]
-            [transform:rotateY(180deg)]
+            backface-hidden
+            transform-[rotateY(180deg)]
           "
         >
 
