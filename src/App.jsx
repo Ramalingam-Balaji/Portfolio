@@ -275,7 +275,7 @@ function App() {
           "
         >
           <img
-            src="/profile.jpg"
+            src="/Balaji.png"
             alt="Ramalingam Balaji"
             className="h-full w-full object-cover"
           />
